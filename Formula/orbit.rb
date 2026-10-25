@@ -1,7 +1,9 @@
 class Orbit < Formula
   desc "Distribute Git-backed skills, workflows, scripts, and commands"
   homepage "https://github.com/HuangChenning/orbit-cli"
+  url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_linux_amd64.tar.gz"
   version "2.0.0"
+  sha256 "0ec74ddcea809bb6930aec42c38c647bda5a93c129d9c730517b7b54252ac14b"
   license "MIT"
 
   uses_from_macos "git"
@@ -21,10 +23,6 @@ class Orbit < Formula
 
   on_linux do
     depends_on arch: :x86_64
-    on_intel do
-      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_linux_amd64.tar.gz"
-      sha256 "0ec74ddcea809bb6930aec42c38c647bda5a93c129d9c730517b7b54252ac14b"
-    end
   end
 
   def install
