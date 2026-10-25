@@ -4,6 +4,8 @@ class Orbit < Formula
   version "2.0.0"
   license "MIT"
 
+  uses_from_macos "git"
+
   on_macos do
     depends_on macos: :ventura
 
@@ -19,11 +21,11 @@ class Orbit < Formula
 
   on_linux do
     depends_on arch: :x86_64
-    url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_linux_amd64.tar.gz"
-    sha256 "0ec74ddcea809bb6930aec42c38c647bda5a93c129d9c730517b7b54252ac14b"
+    on_intel do
+      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_linux_amd64.tar.gz"
+      sha256 "0ec74ddcea809bb6930aec42c38c647bda5a93c129d9c730517b7b54252ac14b"
+    end
   end
-
-  uses_from_macos "git"
 
   def install
     bin.install "orbit"
@@ -40,7 +42,7 @@ class Orbit < Formula
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/orbit --version")
+    assert_match version.to_s, shell_output("#{bin}/orbit --version")
     system bin/"orbit", "init", "--path", testpath/"config"
     config = testpath/"config/orbit.yaml"
     assert_match 'version: "1.0"', config.read

@@ -36,3 +36,5 @@ jobs:
           brew readall --os=all --arch=all HuangChenning/tap
           brew test HuangChenning/tap/orbit
           "$(brew --prefix orbit)/bin/orbit" --version
+      - name: Check formula style
+        run: brew style Formula/orbit.rb
