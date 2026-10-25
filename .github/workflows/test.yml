@@ -30,10 +30,9 @@ jobs:
           fi
       - name: Install tap from the reviewed checkout
         run: brew tap HuangChenning/tap "$GITHUB_WORKSPACE"
-      - name: Check formula across platforms
-        run: brew readall --os=all --arch=all HuangChenning/tap
       - name: Install released binary and verify behavior
         run: |
           brew install HuangChenning/tap/orbit
+          brew readall --os=all --arch=all HuangChenning/tap
           brew test HuangChenning/tap/orbit
           "$(brew --prefix orbit)/bin/orbit" --version
