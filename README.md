@@ -25,7 +25,7 @@ If a manual installation appears first in PATH, `command -v orbit` identifies it
 
 After publishing a stable Orbit release:
 
-1. Create a branch and update `Formula/orbit.rb`: version, the three release archive URLs, and their complete SHA256 values from the release's `SHA256SUMS`. Never replace an archive for an existing version.
+1. Create a branch and update `Formula/orbit.rb`: the three release archive URLs (which determine the formula version) and their complete SHA256 values from the release's `SHA256SUMS`. Never replace an archive for an existing version.
 2. Install the changed formula with `brew install HuangChenning/tap/orbit` (or `brew reinstall` if already installed). Then run `brew readall --os=all --arch=all HuangChenning/tap` and `brew test HuangChenning/tap/orbit`.
 3. Open a pull request. The installation workflow tests the PR's formula on macOS arm64, macOS amd64, and Linux amd64. Merge after review and successful checks. Users receive the updated formula through `brew update`.
 

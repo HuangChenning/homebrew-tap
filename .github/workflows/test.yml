@@ -38,3 +38,5 @@ jobs:
           "$(brew --prefix orbit)/bin/orbit" --version
       - name: Check formula style
         run: brew style Formula/orbit.rb
+      - name: Audit formula
+        run: brew audit --strict HuangChenning/tap/orbit
