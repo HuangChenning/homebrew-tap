@@ -1,8 +1,8 @@
 class Orbit < Formula
   desc "Distribute Git-backed skills, workflows, scripts, and commands"
   homepage "https://github.com/HuangChenning/orbit-cli"
-  url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_linux_amd64.tar.gz"
-  sha256 "0ec74ddcea809bb6930aec42c38c647bda5a93c129d9c730517b7b54252ac14b"
+  url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.1.0/orbit_2.1.0_linux_amd64.tar.gz"
+  sha256 "e6d8d39c8326be0a058c69d838765edfecc644faf78f01ebc311c79f643e45ec"
   license "MIT"
 
   uses_from_macos "git"
@@ -11,12 +11,12 @@ class Orbit < Formula
     depends_on macos: :ventura
 
     on_arm do
-      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_darwin_arm64.tar.gz"
-      sha256 "7c4002cdb277d9e0f9d8d81bc3e258c4cc7e442c71716e55bd1104fc07de48d1"
+      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.1.0/orbit_2.1.0_darwin_arm64.tar.gz"
+      sha256 "f29adca20f5a3b681683a703daba68ff65633b928622ded37e30a822af27f5cb"
     end
     on_intel do
-      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.0.0/orbit_2.0.0_darwin_amd64.tar.gz"
-      sha256 "fda5492b579290b50fecf965d0750a1d84c00b1d7c7f8a845d06e5f8ee9f2174"
+      url "https://github.com/HuangChenning/orbit-cli/releases/download/v2.1.0/orbit_2.1.0_darwin_amd64.tar.gz"
+      sha256 "3c6baadbf97e0bd14686741781573b1fd2b0d0b70acda13484374f6ebd20fcc4"
     end
   end
 
